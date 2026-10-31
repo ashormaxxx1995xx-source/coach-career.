@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-ar: 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-en: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html[dir="rtl"] {
+    font-family: var(--font-ar);
+  }
+
+  html[dir="ltr"] {
+    font-family: var(--font-en);
+  }
+}
+
+/* Custom Tactical Pitch Background */
+.pitch-pattern {
+  background-color: #071f15;
+  background-image: 
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 50px, rgba(0,0,0,0.1) 50px, rgba(0,0,0,0.1) 100px);
+}
+
+/* 3D Floating Button with Realistic Depth and Shadow */
+@keyframes float3d {
+  0%, 100% {
+    transform: translateY(0px) rotateX(4deg);
+    box-shadow: 0 15px 30px -5px rgba(16, 185, 129, 0.4), 0 0 40px rgba(5, 150, 105, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -6px 12px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: translateY(-8px) rotateX(2deg);
+    box-shadow: 0 24px 45px -5px rgba(16, 185, 129, 0.5), 0 0 60px rgba(5, 150, 105, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -6px 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.btn-3d-floating {
+  animation: float3d 3.6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.btn-3d-floating:active {
+  transform: translateY(3px) scale(0.97) !important;
+  box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3), inset 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Glow Pulses */
+@keyframes auraPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.04);
+  }
+}
+
+.aura-glow {
+  animation: auraPulse 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080c14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Smooth transitions */
+* {
+  -webkit-tap-highlight-color: transparent;
+}

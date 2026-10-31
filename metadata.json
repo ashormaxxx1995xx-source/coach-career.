@@ -1,0 +1,8 @@
+{
+  "name": "Remix مسيرة المدرب – COACH CAREER",
+  "description": "لعبة إدارية كروية متكاملة لمحاكاة مسيرة مدرب كرة قدم من الدرجات الإنجليزية الدنيا إلى قمة المجد الأوروبي، مع نظام تكتيكي وسوق انتقالات وأكاديمية ناشئين ومستويات مهنية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

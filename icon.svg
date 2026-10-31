@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329"/>
+      <stop offset="50%" stop-color="#052e16"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Full Bleed Background -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Shield Crest within 80% Safe Zone -->
+  <path d="M 256 60 L 390 110 C 390 280 256 420 256 440 C 256 420 122 280 122 110 Z" 
+        fill="#041f17" stroke="url(#goldGrad)" stroke-width="8" stroke-linejoin="round" filter="url(#glow)"/>
+        
+  <!-- Inner Shield Trim -->
+  <path d="M 256 80 L 370 122 C 370 268 256 395 256 410 C 256 395 142 268 142 122 Z" 
+        fill="#022c22" stroke="url(#emeraldGrad)" stroke-width="3" opacity="0.8"/>
+
+  <!-- Football Hexagon Pattern -->
+  <circle cx="256" cy="225" r="75" fill="#0f172a" stroke="url(#goldGrad)" stroke-width="5"/>
+  <polygon points="256,190 285,210 274,242 238,242 227,210" fill="#f8fafc"/>
+  <polygon points="256,165 240,175 220,165 210,185 227,210 256,190 285,210 302,185 292,165 272,175" fill="#059669" opacity="0.3"/>
+  <line x1="256" y1="190" x2="256" y2="150" stroke="#f8fafc" stroke-width="3"/>
+  <line x1="285" y1="210" x2="325" y2="200" stroke="#f8fafc" stroke-width="3"/>
+  <line x1="274" y1="242" x2="300" y2="280" stroke="#f8fafc" stroke-width="3"/>
+  <line x1="238" y1="242" x2="212" y2="280" stroke="#f8fafc" stroke-width="3"/>
+  <line x1="227" y1="210" x2="187" y2="200" stroke="#f8fafc" stroke-width="3"/>
+
+  <!-- Golden Stars of Mastery -->
+  <polygon points="256,315 262,330 278,331 266,341 270,357 256,348 242,357 246,341 234,331 250,330" fill="url(#goldGrad)"/>
+  <polygon points="215,322 220,334 233,335 223,343 226,356 215,349 204,356 207,343 197,335 210,334" fill="url(#goldGrad)" transform="scale(0.85) translate(40, 50)"/>
+  <polygon points="297,322 302,334 315,335 305,343 308,356 297,349 286,356 289,343 279,335 292,334" fill="url(#goldGrad)" transform="scale(0.85) translate(50, 50)"/>
+
+  <!-- Coach Career Banner Emblem -->
+  <rect x="140" y="375" width="232" height="34" rx="17" fill="url(#goldGrad)"/>
+  <text x="256" y="398" font-family="Arial, sans-serif" font-weight="900" font-size="18" fill="#020617" text-anchor="middle" letter-spacing="2">COACH CAREER</text>
+</svg>
